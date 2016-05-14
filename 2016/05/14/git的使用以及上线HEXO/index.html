@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>git的使用以及上线HEXO | 愛尚丨輕博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="上一篇 给大家介绍了 如何在 本地搭建 HEXO 博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说 如何让自己的 博客上线">
@@ -20,232 +21,195 @@
 <meta name="twitter:description" content="上一篇 给大家介绍了 如何在 本地搭建 HEXO 博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说 如何让自己的 博客上线">
 <meta name="twitter:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051104.png">
   
+    <link rel="alternative" href="/atom.xml" title="愛尚丨輕博客" type="application/atom+xml">
   
-    <link rel="icon" href="/img/favicon.png">
   
-  
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          fancybox: true,
-          animate: true,
-          isHome: false,
-          isPost: true,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
-      }
-  </script>
 </head>
+
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/head.jpg" class="js-avatar">
-            
-        </a>
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+		</a>
 
-        <hgroup>
-          <h1 class="header-author"><a href="/">Apple Sun</a></h1>
-        </hgroup>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Apple Sun</a></h1>
+		</hgroup>
 
-        
-        <p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
-        
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
+		
+		<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+		
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/Home">博客首页</a></li>
-                        
-                            <li><a href="/FrontEndGuide">前端导航</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
-                            
-                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
-                            
-                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/luuman" title="zhihu">zhihu</a>
-                            
-                                <a class="fl weibo" target="_blank" href="http://weibo.com/lishangmou" title="weibo">weibo</a>
-                            
-                                <a class="fl google" target="_blank" href="http://i.youku.com/shangmou" title="google">google</a>
-                            
-                                <a class="fl twitter" target="_blank" href="http: //twitter.com/luuman" title="twitter">twitter</a>
-                            
-                                <a class="fl facebook" target="_blank" href="#" title="facebook">facebook</a>
-                            
-                                <a class="fl rss" target="_blank" href="/" title="rss">rss</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/﹣-CSS/" style="font-size: 10px;">﹣ CSS</a> <a href="/tags/﹣hexo/" style="font-size: 10px;">﹣hexo</a> <a href="/tags/﹣网站向导/" style="font-size: 10px;">﹣网站向导</a>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://MOxFIVE.github.io/">MOxFIVE</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.vsay.cn/">DoubleV</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ccwebsite.com/">兮兮</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.dandyweng.com/">翁天信</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.plqblog.com/views/index.php">潘利强</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.hankin.cn/">hankin</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.waydrow.com/">waydrow</a>
-                    
-                    </div>
-                </section>
-                
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/DragonKnightLOL" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/﹣-CSS/" style="font-size: 10px;">﹣ CSS</a> <a href="/tags/﹣hexo/" style="font-size: 10px;">﹣hexo</a> <a href="/tags/﹣网站向导/" style="font-size: 10px;">﹣网站向导</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://qingxinxuan11.github.io/">潘杰的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奧巴馬的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">習近平的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">普京的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">希拉里的微博</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本拉登的微信公眾號</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">Apple Sun ；MyQQ ： 1160948478;CellPhone ： 18861858309</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
 </div>
+
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Apple Sun</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Apple Sun</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/Home">博客首页</a></li>
-                
-                    <li><a href="/FrontEndGuide">前端导航</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
-                    
-                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
-                    
-                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/luuman" title="zhihu">zhihu</a>
-                    
-                        <a class="weibo" target="_blank" href="http://weibo.com/lishangmou" title="weibo">weibo</a>
-                    
-                        <a class="google" target="_blank" href="http://i.youku.com/shangmou" title="google">google</a>
-                    
-                        <a class="twitter" target="_blank" href="http: //twitter.com/luuman" title="twitter">twitter</a>
-                    
-                        <a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
-                    
-                        <a class="rss" target="_blank" href="/" title="rss">rss</a>
-                    
-                </div>
-            </nav>
-        </header>                
-    </div>
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Apple Sun</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Apple Sun</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/DragonKnightLOL" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
 </nav>
+
       <div class="body-wrap"><article id="post-git的使用以及上线HEXO" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/05/14/git的使用以及上线HEXO/" class="article-date">
-      <time datetime="2016-05-14T13:00:41.000Z" itemprop="datePublished">2016-05-14</time>
+  	<time datetime="2016-05-14T13:00:41.000Z" itemprop="datePublished">2016-05-14</time>
 </a>
     </div>
   
@@ -266,11 +230,11 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
 
         <div class="clearfix"></div>
       </div>
@@ -278,7 +242,6 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-          
         <h5 id="上一篇-给大家介绍了-如何在-本地搭建-HEXO-博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说-如何让自己的-博客上线"><a href="#上一篇-给大家介绍了-如何在-本地搭建-HEXO-博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说-如何让自己的-博客上线" class="headerlink" title="上一篇 给大家介绍了 如何在 本地搭建 HEXO 博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说 如何让自己的 博客上线"></a>上一篇 给大家介绍了 如何在 本地搭建 HEXO 博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说 如何让自己的 博客上线</h5><a id="more"></a>
 <h1 id="Hello-我又回来了！-￣3-ε￣"><a href="#Hello-我又回来了！-￣3-ε￣" class="headerlink" title="Hello ,我又回来了！( ￣3)(ε￣ )"></a>Hello ,我又回来了！(<em> ￣3)(ε￣ </em>)</h1><h2 id="浅谈-如何让网站上线"><a href="#浅谈-如何让网站上线" class="headerlink" title="浅谈 如何让网站上线"></a>浅谈 如何让网站上线</h2><h3 id="方法一：花钱！！！"><a href="#方法一：花钱！！！" class="headerlink" title="方法一：花钱！！！"></a>方法一：花钱！！！</h3><h5 id="是的，通过-购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于-自己爽，想让小伙伴们也能享受自己的-分享。所以，一般不大建议-使用-这个模式-进行前端学习使用。"><a href="#是的，通过-购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于-自己爽，想让小伙伴们也能享受自己的-分享。所以，一般不大建议-使用-这个模式-进行前端学习使用。" class="headerlink" title="是的，通过 购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于 自己爽，想让小伙伴们也能享受自己的 分享。所以，一般不大建议 使用 这个模式 进行前端学习使用。"></a>是的，通过 购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于 自己爽，想让小伙伴们也能享受自己的 分享。所以，一般不大建议 使用 这个模式 进行前端学习使用。</h5><h3 id="方法二：免费！！！"><a href="#方法二：免费！！！" class="headerlink" title="方法二：免费！！！"></a>方法二：免费！！！</h3><h5 id="网络上一搜一大把的免费开源产品，在众多免费提供商中，github-更加符合我们的需求，并且有越来越多的人使用github-来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。"><a href="#网络上一搜一大把的免费开源产品，在众多免费提供商中，github-更加符合我们的需求，并且有越来越多的人使用github-来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。" class="headerlink" title="网络上一搜一大把的免费开源产品，在众多免费提供商中，github 更加符合我们的需求，并且有越来越多的人使用github 来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。"></a>网络上一搜一大把的免费开源产品，在众多免费提供商中，github 更加符合我们的需求，并且有越来越多的人使用github 来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。</h5><blockquote>
 <p>Just Do It！！！</p>
@@ -340,24 +303,6 @@
   </div>
   
     
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/05/14/git的使用以及上线HEXO/">git的使用以及上线HEXO</a></p>
-        <p><span>文章作者:</span><a href="/" title="访问 Apple Sun 的个人博客">Apple Sun</a></p>
-        <p><span>发布时间:</span>2016年05月14日 - 21时00分</p>
-        <p><span>最后更新:</span>2016年05月14日 - 21时33分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/05/14/git的使用以及上线HEXO/" title="git的使用以及上线HEXO">http://www.awebman.cn/2016/05/14/git的使用以及上线HEXO/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.awebman.cn/2016/05/14/git的使用以及上线HEXO/　　作者: Apple Sun" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script src="/js/clipboard.min.js"></script>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
 <nav id="article-nav">
   
     <a href="/2016/05/14/打开本站的正确方式/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -380,175 +325,89 @@
   
 </article>
 
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#上一篇-给大家介绍了-如何在-本地搭建-HEXO-博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说-如何让自己的-博客上线"><span class="toc-number">1.</span> <span class="toc-text">上一篇 给大家介绍了 如何在 本地搭建 HEXO 博客的文章，不过，很多人依然不能满足于让自己阅读，迫切想给更多的小伙伴分享，介于此，咱们说说 如何让自己的 博客上线</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-我又回来了！-￣3-ε￣"><span class="toc-number"></span> <span class="toc-text">Hello ,我又回来了！( ￣3)(ε￣ )</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#浅谈-如何让网站上线"><span class="toc-number"></span> <span class="toc-text">浅谈 如何让网站上线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：花钱！！！"><span class="toc-number"></span> <span class="toc-text">方法一：花钱！！！</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#是的，通过-购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于-自己爽，想让小伙伴们也能享受自己的-分享。所以，一般不大建议-使用-这个模式-进行前端学习使用。"><span class="toc-number">1.</span> <span class="toc-text">是的，通过 购买域名、租赁服务器、并做好域名解析跳转，达到可访问要求。这一套下来，花了不少钱。不过，很多人建网站，还是基于 自己爽，想让小伙伴们也能享受自己的 分享。所以，一般不大建议 使用 这个模式 进行前端学习使用。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：免费！！！"><span class="toc-number"></span> <span class="toc-text">方法二：免费！！！</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#网络上一搜一大把的免费开源产品，在众多免费提供商中，github-更加符合我们的需求，并且有越来越多的人使用github-来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。"><span class="toc-number">1.</span> <span class="toc-text">网络上一搜一大把的免费开源产品，在众多免费提供商中，github 更加符合我们的需求，并且有越来越多的人使用github 来做项目，所以在github上做博客亦作为知识的延伸。一举两得，何乐而不为之。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册github"><span class="toc-number"></span> <span class="toc-text">注册github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请注意是以您的用户名开头的-例如我的为：-“-CracKerMe-github-io-”-用户名后面的“-github-io”不得修改，此为您的二级域名。"><span class="toc-number"></span> <span class="toc-text">请注意是以您的用户名开头的,例如我的为：  “ CracKerMe.github.io ”   用户名后面的“.github.io”不得修改，此为您的二级域名。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#请务必注意这里的SSH-和-HTTPS-的切换，因为-会用到。"><span class="toc-number"></span> <span class="toc-text">请务必注意这里的SSH 和 HTTPS 的切换，因为 会用到。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请先复制SSH下的-“-git-github-com-“-开头的一串内容"><span class="toc-number"></span> <span class="toc-text">请先复制SSH下的 “ git@github.com: “ 开头的一串内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#打开终端，输入-ssh-keygen-，3个回车，跳出一长串代码，这时候输入-vim-ssh-id-rsa-pub-，此时复制-ssh开头到local-的所有字符串，复制好了之后，填入-上面的-key-里面。-Add-SSH-key"><span class="toc-number"></span> <span class="toc-text">打开终端，输入 ssh-keygen ，3个回车，跳出一长串代码，这时候输入  vim ~/.ssh/id_rsa.pub ，此时复制 ssh开头到local 的所有字符串，复制好了之后，填入 上面的 key 里面。 Add SSH key!</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不过，小伙伴们是不是-卡在刚才的界面，不得动弹？按下-Shift-q-注意实在英文输入法下-⊙o⊙-哦"><span class="toc-number"></span> <span class="toc-text">不过，小伙伴们是不是 卡在刚才的界面，不得动弹？按下 Shift + : + q (注意实在英文输入法下(⊙o⊙)哦)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#接下来配置-本地数据"><span class="toc-number"></span> <span class="toc-text">接下来配置 本地数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#此处的-yourname-为-您的-github-用户名，email-example-com-就是您在注册github时绑定的邮箱-注意是-2条命令"><span class="toc-number"></span> <span class="toc-text">此处的 yourname 为 您的 github 用户名，email@example.com 就是您在注册github时绑定的邮箱.注意是 2条命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接下来就可以直接download-你的git仓库的内容了"><span class="toc-number"></span> <span class="toc-text">接下来就可以直接download 你的git仓库的内容了</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#保留所有修改"><span class="toc-number"></span> <span class="toc-text">保留所有修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#确认所有修改-’’里面可理解为更新日志（支持中文）"><span class="toc-number"></span> <span class="toc-text">确认所有修改,’’里面可理解为更新日志（支持中文）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#将所有修改提交至缓存区，后面依然是SSH下的-“-git-github-com-“-开头的一串内容"><span class="toc-number"></span> <span class="toc-text">将所有修改提交至缓存区，后面依然是SSH下的 “ git@github.com: “ 开头的一串内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#确认推送至您的github服务器"><span class="toc-number"></span> <span class="toc-text">确认推送至您的github服务器</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#想上传博客了么？别急-胜利在望"><span class="toc-number"></span> <span class="toc-text">想上传博客了么？别急 胜利在望</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#距离成功-只相差一个插件：hexo-deployer-git"><span class="toc-number"></span> <span class="toc-text">距离成功 只相差一个插件：hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#终端在您的-博客所在文件夹下，输入一下命令，即可完成github-的-推送"><span class="toc-number"></span> <span class="toc-text">终端在您的 博客所在文件夹下，输入一下命令，即可完成github 的 推送</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#小结一下，可能会有小伙伴问，上传博客这么麻烦，那以后也要这么麻烦么？"><span class="toc-number"></span> <span class="toc-text">小结一下，可能会有小伙伴问，上传博客这么麻烦，那以后也要这么麻烦么？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Of-cause-not！以后再更新博客的时候，只需要-重复最后两个命令即可。"><span class="toc-number"></span> <span class="toc-text">Of cause not！以后再更新博客的时候，只需要 重复最后两个命令即可。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相信您看完了这篇文章，跟着做一做还是会有收获的！"><span class="toc-number"></span> <span class="toc-text">相信您看完了这篇文章，跟着做一做还是会有收获的！</span></a>
-</div>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-    }
-</script>
-
-
-
-
-
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/05/14/git的使用以及上线HEXO/" data-title="git的使用以及上线HEXO" data-url="http://www.awebman.cn/2016/05/14/git的使用以及上线HEXO/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"awebman"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '/js/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-    <!-- 多说公共JS代码 end -->
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 </div>
 
-    
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/05/14/打开本站的正确方式/" title="上一篇: 打开本站的正确方式">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a href="/2016/05/14/本地博客的搭建/" title="下一篇: 本地博客的搭建">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/CSS自适应汇总/">CSS自适应汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/伪元素浅谈/">伪元素浅谈</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/HEXO博客优化/">HEXO博客优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/打开本站的正确方式/">打开本站的正确方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/git的使用以及上线HEXO/">git的使用以及上线HEXO</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/本地博客的搭建/">本地博客的搭建</a></li></ul>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-    <script>
-        $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-            }
-        })
-    </script>
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2016 Apple Sun
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
-            </div>
-        </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站访问数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
-    </div>
-</footer>
-
-    </div>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
 
 
 
 
-	<script>
-	var _hmt = _hmt || [];
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="git的使用以及上线HEXO" data-title="git的使用以及上线HEXO" data-url="http://www.awebman.cn/2016/05/14/git的使用以及上线HEXO/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
 	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?f10e9c525ea0a5e2fc30068710fd7b1d";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
 	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Apple Sun
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>Theme by SunPing
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
 
 
 <script type="text/x-mathjax-config">
@@ -569,49 +428,6 @@ MathJax.Hub.Queue(function() {
 </script>
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
 </script>
 
 
