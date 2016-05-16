@@ -212,7 +212,7 @@ a {
 }
 #container #mobile-nav {
   display: none;
-  background: url("../img/bg.jpg") #515457;
+  background:  #515457;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
