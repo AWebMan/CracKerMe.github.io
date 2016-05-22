@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>关于console你不知道的事（二） | 愛尚丨輕博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效：
+更高「逼格」更快「开发调试」更强「进阶级的Frontender」
+Bug无处遁形「Console大法好」">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于console你不知道的事（二）">
+<meta property="og:url" content="http://www.awebman.cn/2016/05/22/关于console你不知道的事（二）/index.html">
+<meta property="og:site_name" content="愛尚丨輕博客">
+<meta property="og:description" content="Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效：
+更高「逼格」更快「开发调试」更强「进阶级的Frontender」
+Bug无处遁形「Console大法好」">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051611.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051612.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051613.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051614.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051615.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051616.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051617.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051617.gif">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051618.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051619.png">
+<meta property="og:updated_time" content="2016-05-22T07:14:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于console你不知道的事（二）">
+<meta name="twitter:description" content="Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效：
+更高「逼格」更快「开发调试」更强「进阶级的Frontender」
+Bug无处遁形「Console大法好」">
+<meta name="twitter:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051611.png">
+  
+    <link rel="alternative" href="/atom.xml" title="愛尚丨輕博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Apple Sun</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">回到主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/Demo">view案列</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Nodejs/" style="font-size: 13.33px;">Nodejs</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/console/" style="font-size: 13.33px;">console</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/gulp/" style="font-size: 13.33px;">gulp</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/jade/" style="font-size: 10px;">jade</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/正则/" style="font-size: 10px;">正则</a> <a href="/tags/浏览器/" style="font-size: 13.33px;">浏览器</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/网站向导/" style="font-size: 10px;">网站向导</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qingxinxuan11.github.io">潘杰的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiehan126.github.io">解晗的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wuxiao1021.github.io">吴肖的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://CXY-WZQ.github.io">王振强的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://41152419901017.github.io">赵德状的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://githubfffffff.github.io">孙登朝的空間</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">N i c k N a m e： Apple Sun；M y Q Q ： 1160948478；C e l l P h o n e ： 18861858309</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Apple Sun</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Apple Sun</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">回到主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/Demo">view案列</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-关于console你不知道的事（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/22/关于console你不知道的事（二）/" class="article-date">
+  	<time datetime="2016-05-22T06:35:03.000Z" itemprop="datePublished">2016-05-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于console你不知道的事（二）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/console/">console</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器/">浏览器</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效："><a href="#Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效：" class="headerlink" title="Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效："></a>Chrome的开发者工具已经强大到没朋友的地步了，特别是其功能丰富界面友好的console，使用得当可以有如下功效：</h3><ul>
+<li>更高「逼格」更快「开发调试」更强「进阶级的Frontender」</li>
+<li>Bug无处遁形「Console大法好」</li>
+</ul>
+<a id="more"></a>
+<h4 id="console-error-console-warn"><a href="#console-error-console-warn" class="headerlink" title="console.error , console.warn"></a>console.error , console.warn</h4><p>他们功能区别不大，意义在于将输出到控制台的信息进行归类，或者说让它们更语义化。<br>各个所代表的语义如下：</p>
+<ul>
+<li>console.log：普通信息</li>
+<li>console.info：提示类信息</li>
+<li>console.error：错误信息</li>
+<li>console.warn：警示信息</li>
+</ul>
+<p>当合理使用上述log方法后，可以很方便地在控制台选择查看特定类型的信息。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console<span class="selector-class">.log</span>(<span class="string">'一颗红心向太阳'</span>,<span class="string">'吼吼~'</span>);</span><br><span class="line">console<span class="selector-class">.info</span>(<span class="string">'楼上药不能停！'</span>);</span><br><span class="line">console<span class="selector-class">.warn</span>(<span class="string">'楼上嘴太贱！'</span>);</span><br><span class="line">console<span class="selector-class">.error</span>(<span class="string">'楼上关你毛事？'</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051611.png" alt=""></p>
+<h3 id="是不是挺有趣的？"><a href="#是不是挺有趣的？" class="headerlink" title="是不是挺有趣的？"></a>是不是挺有趣的？</h3><h4 id="console-group-console-groupEnd"><a href="#console-group-console-groupEnd" class="headerlink" title="console.group , console.groupEnd"></a>console.group , console.groupEnd</h4><p>如果再配合console.group 与console.groupEnd，可以将这种分类管理的思想发挥到极致。这适合于在开发一个规模很大模块很多很复杂的Web APP时，将各自的log信息分组到以各自命名空间为名称的组里面。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console<span class="selector-class">.group</span>(<span class="string">"app.foo"</span>);</span><br><span class="line">console<span class="selector-class">.log</span>(<span class="string">"你要是惹我"</span>);</span><br><span class="line">console<span class="selector-class">.groupEnd</span>();</span><br><span class="line">console<span class="selector-class">.group</span>(<span class="string">"app.bar"</span>);</span><br><span class="line">console<span class="selector-class">.log</span>(<span class="string">"我就把你写到我的博客里 哼~"</span>);</span><br><span class="line">console<span class="selector-class">.groupEnd</span>();</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051612.png" alt=""></p>
+<h4 id="console-assert"><a href="#console-assert" class="headerlink" title="console.assert"></a>console.assert</h4><p>当你想代码满足某些条件时才输出信息到控制台，那么你大可不必写if或者三元表达式来达到目的，cosole.assert便是这样场景下一种很好的工具，它会先对传入的表达式进行断言，只有表达式为<code>假</code>时才输出相应信息到控制台。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isDebug=<span class="keyword">false</span>;</span><br><span class="line">console.<span class="keyword">assert</span>(isDebug,<span class="string">'我觉得上面出问题了'</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051613.png" alt=""></p>
+<h4 id="console-count"><a href="#console-count" class="headerlink" title="console.count"></a>console.count</h4><p>除了条件输出的场景，还有常见的场景是计数。<br>当你想统计某段代码执行了多少次时也大可不必自己去写相关逻辑，内置的console.count可以很地胜任这样的任务。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//其他函数逻辑blah blah。。。</span></span><br><span class="line">	<span class="built_in">console</span>.count(<span class="string">'执行的次数是：'</span>);</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line">foo();</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051614.png" alt=""></p>
+<h4 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir"></a>console.dir</h4><p>将DOM结点以JavaScript对象的形式输出到控制台<br>而console.log是直接将该DOM结点以DOM树的结构进行输出，与在元素审查时看到的结构是一致的。不同的展现形式，同样的优雅，各种体位任君选择反正就是方便与体贴。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.dir(<span class="built_in">document</span>.body);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051615.png" alt=""></p>
+<h4 id="console-time-amp-console-timeEnd"><a href="#console-time-amp-console-timeEnd" class="headerlink" title="console.time &amp; console.timeEnd"></a>console.time &amp; console.timeEnd</h4><p>输出一些调试信息是控制台最常用的功能，当然，它的功能远不止于此。当做一些性能测试时，同样可以在这里很方便地进行。<br>比如需要考量一段代码执行的耗时情况时，可以用console.time与 console.timeEnd来做此事。</p>
+<p>这里借用官方文档的例子：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="built_in">time</span>(<span class="string">"Array initialize"</span>);</span><br><span class="line"><span class="built_in">var</span> <span class="built_in">array</span>= <span class="built_in">new</span> Array(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">var</span> i = <span class="built_in">array</span>.<span class="built_in">length</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="built_in">array</span>[i] = <span class="built_in">new</span> Object();</span><br><span class="line">&#125;;</span><br><span class="line">console.timeEnd(<span class="string">"Array initialize"</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051616.png" alt=""></p>
+<h5 id="当然，我们可以选择自己的代码来计时："><a href="#当然，我们可以选择自己的代码来计时：" class="headerlink" title="当然，我们可以选择自己的代码来计时："></a>当然，我们可以选择自己的代码来计时：</h5><p>以下仅供参考：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> start=<span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line"><span class="keyword">var</span> array= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    array[i] = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()-start);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051617.png" alt=""><br>相信你也看到了，用内置的console.time是多么地方便，省去了自己写代码来计算的工作量。另外值得一提的是，通过调用内置的console.time得到的结果要比自己手动计算的时间差更精确可靠。</p>
+<h4 id="console-profile-amp-console-timeLime"><a href="#console-profile-amp-console-timeLime" class="headerlink" title="console.profile &amp; console.timeLime"></a>console.profile &amp; console.timeLime</h4><p>当想要查看CPU使用相关的信息时，可以使用console.profile配合 console.profileEnd来完成这个需求。<br>这一功能可以通过UI界面来完成，Chrome 开发者工具里面有个tab便是Profile。</p>
+<p>与此类似的功能还有console.timeLine配合 console.timeLineEnd,它的作用是开始记录一段时间轴，同样可以通过Chrome开发者工具里的Timeline 标签来进行相应操作。</p>
+<p>所以在我看来这两个方法有点鸡肋，因为都可以通过操作界面来完成。但至少他提供了一种命令行方式的交互，还是多了种姿势供选择吧。</p>
+<h4 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace"></a>console.trace</h4><p>堆栈跟踪相关的调试可以使用console.trace。这个同样可以通过UI界面完成。当代码被打断点后，可以在Call Stack面板中查看相关堆栈信息。</p>
+<p>上面介绍的都是挂在window.console这个对象下面的方法，统称为Console API，接下来的这些方法确切地说应该叫命令，是Chrome内置提供，在控制台中使用的，他们统称为Command Line API。</p>
+<h4 id=""><a href="#" class="headerlink" title="$"></a>$</h4><p>似乎美刀总是被程序员及各种编程语言所青睐「你看看PHP代码就知道PHPer有多爱钱了」，在Chrome的控制台里，$用处还真是蛮多且方便的。<br>$_命令返回最近一次表达式执行的结果，功能跟按向上的方向键再回车是一样的，但它可以做为一个变量使用在你接下来的表达式中：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>+<span class="number">2</span><span class="comment">//回车，再</span></span><br><span class="line"><span class="comment">//得到结果4之后再输入下面的</span></span><br><span class="line"><span class="symbol">$</span>_+<span class="number">1</span><span class="comment">//回车得5</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>上面的$_需要领悟其奥义才能使用得当，而$0~$4则代表了最近5个你选择过的DOM节点。<br>什么意思？在页面右击选择审查元素，然后在弹出来的DOM结点树上面随便点选，这些被点过的节点会被记录下来，而$0会返回最近一次点选的DOM结点，以此类推，$1返回的是上上次点选的DOM节点，最多保存了5个，如果不够5个，则返回undefined。<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051617.gif" alt=""><h5 id="另外值得一赞的是，Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节点，多么滴熟悉。"><a href="#另外值得一赞的是，Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节点，多么滴熟悉。" class="headerlink" title="另外值得一赞的是，Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节点，多么滴熟悉。"></a>另外值得一赞的是，Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节点，多么滴熟悉。</h5></li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(</span><span class="string">'body'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051618.png" alt=""></p>
+<ul>
+<li>$(selector)返回的是满足选择条件的首个DOM元素。<br>剥去她伪善的外衣，其实$(selector)是原生JavaScript document.querySelector() 的封装。<br>同时另一个命令$$(selector)返回的是所有满足选择条件的元素的一个集合，是对document.querySelectorAll() 的封装。</li>
+</ul>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span><span class="symbol">$</span>(<span class="string">'div'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="keys-amp-values"><a href="#keys-amp-values" class="headerlink" title="keys &amp; values"></a>keys &amp; values</h4><p>这是一对基友。前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组。具体请看下面的例子：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var tboy=&#123;<span class="string">name:</span><span class="string">'wayou'</span>,<span class="string">gender:</span><span class="string">'unknown'</span>,<span class="string">hobby:</span><span class="string">'opposite to the gender'</span>&#125;;</span><br><span class="line">keys(tboy);</span><br><span class="line">values(tboy);</span><br></pre></td></tr></table></figure>
+<h4 id="monitor-amp-unmonitor"><a href="#monitor-amp-unmonitor" class="headerlink" title="monitor &amp; unmonitor"></a>monitor &amp; unmonitor</h4><p>monitor(function)，它接收一个函数名作为参数，比如function a,每次a被执行了，都会在控制台输出一条信息，里面包含了函数的名称a及执行时所传入的参数。</p>
+<p>而unmonitor(function)便是用来停止这一监听。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span><span class="params">(name)</span></span>&#123;</span><br><span class="line">	alert(<span class="string">'hello,'</span>+name);</span><br><span class="line">&#125;</span><br><span class="line">monitor(sayHello);</span><br><span class="line">sayHello(<span class="string">'wayou'</span>);</span><br><span class="line">unmonitor(sayHello);</span><br><span class="line">sayHello(<span class="string">'wayou'</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051619.png" alt=""></p>
+<h4 id="debug-amp-undebug"><a href="#debug-amp-undebug" class="headerlink" title="debug &amp; undebug"></a>debug &amp; undebug</h4><p>debug同样也是接收一个函数名作为参数。当该函数执行时自动断下来以供调试，类似于在该函数的入口处打了个断点，可以通过debugger来做到，同时也可以通过在Chrome开发者工具里找到相应源码然后手动打断点。<br>而undebug 则是解除该断点。</p>
+<p>而其他还有好些命令则让人没有说的欲望，因为好些都可以通过Chrome开发者工具的UI界面来操作并且比用在控制台输入要方便。</p>
+<p><em>Yours sincerely SunPing</em></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/22/关于console你不知道的事（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于console你不知道的事（一）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于console你不知道的事（二）" data-title="关于console你不知道的事（二）" data-url="http://www.awebman.cn/2016/05/22/关于console你不知道的事（二）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Apple Sun
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>Theme by SunPing
+      	</div>
+    </div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+    您是本站第<span id="busuanzi_value_site_pv"></span>位访问者
+</span>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+  </div>
+</body>
+</html>

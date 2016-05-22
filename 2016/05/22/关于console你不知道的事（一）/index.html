@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>关于console你不知道的事（一） | 愛尚丨輕博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于console你不知道的事（一）">
+<meta property="og:url" content="http://www.awebman.cn/2016/05/22/关于console你不知道的事（一）/index.html">
+<meta property="og:site_name" content="愛尚丨輕博客">
+<meta property="og:description" content="当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051608.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051609.png">
+<meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051610.png">
+<meta property="og:updated_time" content="2016-05-22T06:40:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于console你不知道的事（一）">
+<meta name="twitter:description" content="当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。">
+<meta name="twitter:image" content="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051608.png">
+  
+    <link rel="alternative" href="/atom.xml" title="愛尚丨輕博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Apple Sun</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">回到主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/Demo">view案列</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Nodejs/" style="font-size: 13.33px;">Nodejs</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/console/" style="font-size: 13.33px;">console</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/gulp/" style="font-size: 13.33px;">gulp</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/jade/" style="font-size: 10px;">jade</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/正则/" style="font-size: 10px;">正则</a> <a href="/tags/浏览器/" style="font-size: 13.33px;">浏览器</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/网站向导/" style="font-size: 10px;">网站向导</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qingxinxuan11.github.io">潘杰的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiehan126.github.io">解晗的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wuxiao1021.github.io">吴肖的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://CXY-WZQ.github.io">王振强的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://41152419901017.github.io">赵德状的空間</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://githubfffffff.github.io">孙登朝的空間</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">N i c k N a m e： Apple Sun；M y Q Q ： 1160948478；C e l l P h o n e ： 18861858309</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Apple Sun</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Apple Sun</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">前端路上的這些那些，有你有我一起前行</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">回到主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/Demo">view案列</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/CracKerMe" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/awebman" title="zhihu">zhihu</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/crackerme" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-关于console你不知道的事（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/22/关于console你不知道的事（一）/" class="article-date">
+  	<time datetime="2016-05-22T05:12:52.000Z" itemprop="datePublished">2016-05-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于console你不知道的事（一）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/console/">console</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器/">浏览器</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。"><a href="#当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。" class="headerlink" title="当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。"></a>当我们开始接触前端这一行，对于谷歌浏览器的接触甚至多于与人的交流，对她的熟悉程度宛如自己的爱人。提及console，更是无人不知无人不晓。可是你知道么？console可以显示图片以及为文字加样式。</h3><p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051608.png" alt=""><br><a id="more"></a><br>在正常模式下，一般只能向 console直至太输出简单的文字信息，但考虑到便于阅读，可以考虑使用console.warn()来输出警告信息，控制台中的效果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051609.png" alt=""></p>
+<p>在输出信息前面会有一个带感叹号的黄色三角警告符号。似乎比一般的console信息要友好得多了。虽然图标是黄色的，但输出的文字仍然是黑色。</p>
+<p>另外经常用到的是输出错误信息。可以通过调用console.erro() 来实现。</p>
+<p>输出的效果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051610.png" alt=""></p>
+<p>信息前面会出现一个带叉的红色圆形图标。</p>
+<p>这个效果要比警告信息更友好了，字体颜色成红色了。</p>
+<p>要更牛叉莫过于对文字应用样式。而现在这一特性已经在谷歌浏览器里实现了。</p>
+<p>在Chrome的开发者工具里，console 可以加样式，可以显示缤纷的颜色，甚至图片。简直爽翻了。</p>
+<p>具体来说，是可以对输出到console控制台的文字进行CSS控制。</p>
+<p>格式如下：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">concole.<span class="built_in">log</span>(<span class="string">"%c需要输出的信息"</span>,<span class="string">"css代码"</span>)</span><br><span class="line">例如：</span><br><span class="line">console.<span class="built_in">log</span>(<span class="string">"%c我是一名前端"</span>,<span class="string">"color:red;font-size:30px"</span>)</span><br></pre></td></tr></table></figure>
+<p>下面是console.log()的官方文档摘要 </p>
+<p><a href="https://developer.chrome.com/devtools/docs/console-api" target="_blank" rel="external">点此传送门查看官方文档</a></p>
+<table>
+<thead>
+<tr>
+<th>Format Specifier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%s</td>
+<td>Formats the value as a string. (将值转化为字符串类型)</td>
+</tr>
+<tr>
+<td>%d or %i</td>
+<td>Formats the value as an integer. (将值转化为整数类型)</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>Formats the value as a floating point value. (将值转化为浮点型)</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>Formats the value as an expandable DOM element<br>(as in the Elements panel).(将值转化为DOM标签)</td>
+</tr>
+<tr>
+<td>%O</td>
+<td>Formats the value as an expandable JavaScript object. (将值转化为js对象)</td>
+</tr>
+<tr>
+<td><code>%c</code></td>
+<td>Formats the output string according to <br> CSS styles you provide.(将值按照你写的css样式进行输出)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="留心最后一点，这就是能实现显示文字的关键所在"><a href="#留心最后一点，这就是能实现显示文字的关键所在" class="headerlink" title="留心最后一点，这就是能实现显示文字的关键所在"></a>留心最后一点，这就是能实现显示文字的关键所在</h4><p>这里 我给大家留下 相关的代码块，还不快去复制到console里面去看看效果？</p>
+<h3 id="3D-文本："><a href="#3D-文本：" class="headerlink" title="3D 文本："></a>3D 文本：</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">console</span><span class="selector-class">.log</span>("%<span class="selector-tag">c3D</span> <span class="selector-tag">Text</span>"," <span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 0 <span class="selector-id">#ccc</span>,0 2<span class="selector-tag">px</span> 0 <span class="selector-id">#c9c9c9</span>,0 3<span class="selector-tag">px</span> 0 <span class="selector-id">#bbb</span>,0 4<span class="selector-tag">px</span> 0 <span class="selector-id">#b9b9b9</span>,0 5<span class="selector-tag">px</span> 0 <span class="selector-id">#aaa</span>,0 6<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.1</span>),0 0 5<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.1</span>),0 1<span class="selector-tag">px</span> 3<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.3</span>),0 3<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.2</span>),0 5<span class="selector-tag">px</span> 10<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.25</span>),0 10<span class="selector-tag">px</span> 10<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.2</span>),0 20<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.15</span>);<span class="selector-tag">font-size</span><span class="selector-pseudo">:5em")</span></span><br></pre></td></tr></table></figure>
+<h3 id="多彩的-CSS"><a href="#多彩的-CSS" class="headerlink" title="多彩的 CSS"></a>多彩的 CSS</h3><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log("<span class="variable">%cColorful CSS","background: rgba(252,234,187,1);background: -moz-linear-gradient(left, rgba(252,234,187,1) 0%</span>, rgba(175,250,77,1) 12<span class="variable">%, rgba(0,247,49,1) 28%</span>, rgba(0,210,247,1) 39<span class="variable">%,rgba(0,189,247,1) 51%</span>, rgba(133,108,217,1) 64<span class="variable">%, rgba(177,0,247,1) 78%</span>, rgba(247,0,189,1) 87<span class="variable">%, rgba(245,22,52,1) 100%</span>);background: -webkit-gradient(left top, right top, color-stop(0<span class="variable">%, rgba(252,234,187,1)), color-stop(12%</span>, rgba(175,250,77,1)), color-stop(28<span class="variable">%, rgba(0,247,49,1)), color-stop(39%</span>, rgba(0,210,247,1)), color-stop(51<span class="variable">%, rgba(0,189,247,1)), color-stop(64%</span>, rgba(133,108,217,1)), color-stop(78<span class="variable">%, rgba(177,0,247,1)), color-stop(87%</span>, rgba(247,0,189,1)), color-stop(100<span class="variable">%, rgba(245,22,52,1)));background: -webkit-linear-gradient(left, rgba(252,234,187,1) 0%</span>, rgba(175,250,77,1) 12<span class="variable">%, rgba(0,247,49,1) 28%</span>, rgba(0,210,247,1) 39<span class="variable">%, rgba(0,189,247,1) 51%</span>, rgba(133,108,217,1) 64<span class="variable">%, rgba(177,0,247,1) 78%</span>, rgba(247,0,189,1) 87<span class="variable">%, rgba(245,22,52,1) 100%</span>);background: -o-linear-gradient(left, rgba(252,234,187,1) 0<span class="variable">%, rgba(175,250,77,1) 12%</span>, rgba(0,247,49,1) 28<span class="variable">%, rgba(0,210,247,1) 39%</span>, rgba(0,189,247,1) 51<span class="variable">%, rgba(133,108,217,1) 64%</span>, rgba(177,0,247,1) 78<span class="variable">%, rgba(247,0,189,1) 87%</span>, rgba(245,22,52,1) 100<span class="variable">%);background: -ms-linear-gradient(left, rgba(252,234,187,1) 0%</span>, rgba(175,250,77,1) 12<span class="variable">%, rgba(0,247,49,1) 28%</span>, rgba(0,210,247,1) 39<span class="variable">%, rgba(0,189,247,1) 51%</span>, rgba(133,108,217,1) 64<span class="variable">%, rgba(177,0,247,1) 78%</span>, rgba(247,0,189,1) 87<span class="variable">%, rgba(245,22,52,1) 100%</span>);background: linear-gradient(to right, rgba(252,234,187,1) 0<span class="variable">%, rgba(175,250,77,1) 12%</span>, rgba(0,247,49,1) 28<span class="variable">%, rgba(0,210,247,1) 39%</span>, rgba(0,189,247,1) 51<span class="variable">%, rgba(133,108,217,1) 64%</span>, rgba(177,0,247,1) 78<span class="variable">%, rgba(247,0,189,1) 87%</span>, rgba(245,22,52,1) 100<span class="variable">%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#f51634', GradientType=1 );font-size:5em")</span></span><br></pre></td></tr></table></figure>
+<h3 id="彩虹文字"><a href="#彩虹文字" class="headerlink" title="彩虹文字"></a>彩虹文字</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="built_in">log</span>('%cRainbow Text ', '<span class="built_in">background</span>-<span class="built_in">image</span>:-webkit-gradient( <span class="built_in">linear</span>, left top, right top, <span class="built_in">color</span>-stop(<span class="number">0</span>, #f22), <span class="built_in">color</span>-stop(<span class="number">0.15</span>, #f2f), <span class="built_in">color</span>-stop(<span class="number">0.3</span>, #22f), <span class="built_in">color</span>-stop(<span class="number">0.45</span>, #2ff), <span class="built_in">color</span>-stop(<span class="number">0.6</span>, #2f2),<span class="built_in">color</span>-stop(<span class="number">0.75</span>, #2f2), <span class="built_in">color</span>-stop(<span class="number">0.9</span>, #ff2), <span class="built_in">color</span>-stop(<span class="number">1</span>, #f22) );<span class="built_in">color</span>:<span class="built_in">transparent</span>;-webkit-<span class="built_in">background</span>-clip: text;<span class="built_in">font</span>-size:5em;');</span><br></pre></td></tr></table></figure>
+<h2 id="在Chrome控制台输出图片"><a href="#在Chrome控制台输出图片" class="headerlink" title="在Chrome控制台输出图片"></a>在Chrome控制台输出图片</h2><p>除了上面介绍的那些炫目的文字效果外，你还可以在Chrome控制台中显示图片,自然地，显示gif这样的动态图片也是没问题的。</p>
+<p>还是应用差不多的代码，只是将内容变成指定背景为图片。</p>
+<p>下面是一个例子：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console<span class="selector-class">.log</span>("%c", "<span class="attribute">padding</span>:<span class="number">100px</span> <span class="number">300px</span>;<span class="attribute">line-height</span>:<span class="number">150px</span>;<span class="attribute">background</span>:url(<span class="string">'imgUrl'</span>) no-repeat;");</span><br></pre></td></tr></table></figure>
+<h4 id="sorry！经本人测试，目前不只是我哪里出错，在console只有留下空白区域，并没有出现图片或者gif-，如果您成功了，请在下方的留言区交流建议"><a href="#sorry！经本人测试，目前不只是我哪里出错，在console只有留下空白区域，并没有出现图片或者gif-，如果您成功了，请在下方的留言区交流建议" class="headerlink" title="sorry！经本人测试，目前不只是我哪里出错，在console只有留下空白区域，并没有出现图片或者gif ，如果您成功了，请在下方的留言区交流建议"></a>sorry！经本人测试，目前不只是我哪里出错，在console只有留下空白区域，并没有出现图片或者gif ，如果您成功了，请在下方的留言区交流建议</h4><p>今天的还满意么？</p>
+<p>-to be continue-</p>
+<p><em>Yours sincerely SunPing</em></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/22/关于console你不知道的事（二）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          关于console你不知道的事（二）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/21/WEB移动端常见问题总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">WEB移动端常见问题总结</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于console你不知道的事（一）" data-title="关于console你不知道的事（一）" data-url="http://www.awebman.cn/2016/05/22/关于console你不知道的事（一）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Apple Sun
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>Theme by SunPing
+      	</div>
+    </div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+    您是本站第<span id="busuanzi_value_site_pv"></span>位访问者
+</span>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+  </div>
+</body>
+</html>
