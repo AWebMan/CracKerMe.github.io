@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 网站向导 | 愛尚丨輕博客</title>
+  <title>JS面向对象基础知识-封装 | 愛尚丨輕博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础｜交流｜成长｜走心｜前端｜學習">
-<meta property="og:type" content="website">
-<meta property="og:title" content="愛尚丨輕博客">
-<meta property="og:url" content="http://www.awebman.cn/tags/网站向导/index.html">
+  <meta name="description" content="学习 Javascript，最难的地方是什么？个人觉得 就是面对对象这一块。对于初学者来说是极为不友好的一种 编程思维方式。这一篇博文我们讨论 “封装”，并会在之后再介绍学习“继承”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS面向对象基础知识-封装">
+<meta property="og:url" content="http://www.awebman.cn/2016/05/25/JS面向对象基础知识/index.html">
 <meta property="og:site_name" content="愛尚丨輕博客">
-<meta property="og:description" content="基础｜交流｜成长｜走心｜前端｜學習">
+<meta property="og:description" content="学习 Javascript，最难的地方是什么？个人觉得 就是面对对象这一块。对于初学者来说是极为不友好的一种 编程思维方式。这一篇博文我们讨论 “封装”，并会在之后再介绍学习“继承”">
+<meta property="og:updated_time" content="2016-05-25T07:39:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愛尚丨輕博客">
-<meta name="twitter:description" content="基础｜交流｜成长｜走心｜前端｜學習">
+<meta name="twitter:title" content="JS面向对象基础知识-封装">
+<meta name="twitter:description" content="学习 Javascript，最难的地方是什么？个人觉得 就是面对对象这一块。对于初学者来说是极为不友好的一种 编程思维方式。这一篇博文我们讨论 “封装”，并会在之后再介绍学习“继承”">
   
     <link rel="alternative" href="/atom.xml" title="愛尚丨輕博客" type="application/atom+xml">
   
@@ -200,53 +201,114 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-JS面向对象基础知识" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/14/打开本站的正确方式/" class="archive-article-date">
-  	<time datetime="2016-05-14T13:01:30.000Z" itemprop="datePublished">May 14</time>
+    <div class="article-meta">
+      <a href="/2016/05/25/JS面向对象基础知识/" class="article-date">
+  	<time datetime="2016-05-25T06:19:15.000Z" itemprop="datePublished">2016-05-25</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/14/打开本站的正确方式/">打开本站的正确方式</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS面向对象基础知识-封装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网站向导/">网站向导</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>学习 <code>Javascript</code>，最难的地方是什么？个人觉得 就是<code>面对对象</code>这一块。对于初学者来说是<code>极为不友好</code>的一种 <code>编程思维方式</code>。这一篇博文我们讨论 <code>“封装”</code>，并会在之后再介绍学习<code>“继承”</code><br><a id="more"></a><br>首先确认一个概念，<code>“万物皆是对象”</code>，具有<code>“属性”</code>或者<code>“方法”</code>亦或者都具备。</p>
+<h3 id="原始模式"><a href="#原始模式" class="headerlink" title="原始模式"></a>原始模式</h3><p>但是在原始的设计模式下，根据对象的属性进行简单的封装，常常遇到类似的问题：</p>
+<p>如果需要生成多个实例的时候，就会发生代码冗余，不能找出存在的基本关系。</p>
+<pre><code>var car1 = {}
+    car1.brand : &quot;BMW&quot;,
+    car1.color : &quot;red&quot;,
+    car1.speed : &quot;500KM/h&quot;
+var car2 = {}
+    car2.brand : &quot;Audi&quot;,
+    car2.color : &quot;grey&quot;,
+    car2.speed : &quot;400KM/h&quot;
+</code></pre><h3 id="原始模式的改进"><a href="#原始模式的改进" class="headerlink" title="原始模式的改进"></a>原始模式的改进</h3><p>就上面的问题，改进后的代码如下：</p>
+<pre><code>function car(band,color,speed){
+    ruturn brand:brand,
+    color:color,
+}
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/25/JS面向对象的5种写法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JS面向对象的5种写法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/24/JS语法特性试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS语法特性试题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JS面向对象基础知识" data-title="JS面向对象基础知识-封装" data-url="http://www.awebman.cn/2016/05/25/JS面向对象基础知识/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -291,9 +353,9 @@
 		fancybox: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
